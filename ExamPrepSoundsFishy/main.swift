@@ -90,11 +90,11 @@ while read4 == 0 {
 if read4 > read3 && read3 > read2 && read2 > read1{
     print("Fish Rising")
 }
-if read1 > read2 && read2 > read3 && read3 > read4{
+else if read1 > read2 && read2 > read3 && read3 > read4{
     print("Fish Diving")
 }
-if read1 == read2 && read2 == read3 && read3 == read4{
+else if read1 == read2 && read2 == read3 && read3 == read4{
     print("Fish At constant depth")
 }else{
-    print("error")
+    print("No Fish")
 }
