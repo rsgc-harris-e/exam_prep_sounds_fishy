@@ -1,31 +1,11 @@
-import Foundation
 
-/*
- 
- ORGANIZING YOUR SOLUTION
- 
- A good way to orgaize your code is to separate your code into the three sections - input, process, output – as much as possible.
- 
- The start of a solution is implemented below. Consider all the possible inputs. Can you finish the solution?
- 
- */
-
-/*
- 
- INPUT
- 
- Be sure that your implementation of this section discards all the possible bad inputs the user could provide.
- 
- Make use of your test plan and algorithm to ensure your code is complete.
- 
- */
-var inputToProcess : String = ""
+var read1 : Int = 0
 
 // Loop until valid input is received
-while inputToProcess == "" {
+while read1 == 0 {
     
     // Show the prompt
-    print("Ask the question here? ", terminator: "")
+    print("Reading 1? ", terminator: "")
     
     // Get the user's input
     var input : String?
@@ -33,41 +13,88 @@ while inputToProcess == "" {
     
     // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
     if let notNilInput = input {
-        
-        // You probably need to add additional checks to be sure the
-        // input received is valid
-        // Add checks as needed...
-        
-        // Save the input given, as we are certain it's what we are looking for now
-        inputToProcess = notNilInput
-        
+        if let inputint = Int(notNilInput){
+            if inputint > 0{
+                read1 = inputint
+            }
+        }
     }
     
 }
+var read2 : Int = 0
 
-/*
- 
- PROCESS
- 
- Here is where you implement the logic that solves the problem at hand.
- 
- Make use of your test plan and algorithm to ensure your code is complete.
- 
- */
+// Loop until valid input is received
+while read2 == 0 {
+    
+    // Show the prompt
+    print("Reading 2? ", terminator: "")
+    
+    // Get the user's input
+    var input : String?
+    input = readLine()
+    
+    // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
+    if let notNilInput = input {
+        if let inputint = Int(notNilInput){
+            if inputint > 0{
+                read2 = inputint
+            }
+        }
+    }
+    
+}
+var read3 : Int = 0
 
-// Add 'process' code below....
-print("replace with process logic")
+// Loop until valid input is received
+while read3 == 0 {
+    
+    // Show the prompt
+    print("Reading 3? ", terminator: "")
+    
+    // Get the user's input
+    var input : String?
+    input = readLine()
+    
+    // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
+    if let notNilInput = input {
+        if let inputint = Int(notNilInput){
+            if inputint > 0{
+                read3 = inputint
+            }
+        }
+    }
+    
+}
+var read4 : Int = 0
 
-
-/*
- 
- OUTPUT
- 
- Here is where you report the results of the 'process' section above.
- 
- Make use of your test plan and algorithm to ensure your code is complete.
- 
- */
-
-// Add 'output' code below... replace what is here as needed.
-print("The input given was: \(inputToProcess)")
+// Loop until valid input is received
+while read4 == 0 {
+    
+    // Show the prompt
+    print("Reading 4? ", terminator: "")
+    
+    // Get the user's input
+    var input : String?
+    input = readLine()
+    
+    // Use optional binding to see if the string can be unwrapped (to see if it is not nil)
+    if let notNilInput = input {
+        if let inputint = Int(notNilInput){
+            if inputint > 0{
+                read4 = inputint
+            }
+        }
+    }
+    
+}
+if read4 > read3 && read3 > read2 && read2 > read1{
+    print("Fish Rising")
+}
+if read1 > read2 && read2 > read3 && read3 > read4{
+    print("Fish Diving")
+}
+if read1 == read2 && read2 == read3 && read3 == read4{
+    print("Fish At constant depth")
+}else{
+    print("error")
+}
